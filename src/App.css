@@ -1,38 +1,238 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: blanchedalmond;
+    overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.342);
+    border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar {
+    width: 100vw;
+    height: 70px;
+    color: #ffa500;
+    /* border-top: 1px solid #ffa500;
+    border-bottom: 1px solid #ffa500; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 10;
+    margin-bottom: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+    width: max-content;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.links {
+    width: 35vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Rubik Doodle Shadow', cursive;
+    color: #ffa500;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+@media (max-width:767px) {
+    .links {
+        display: none;
+    }
+}
+
+.mainBody {
+    width: 100vw;
+    height: 89vh;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 100px;
+}
+
+.herotxt {
+    width: 50vw;
+    height: 80vh;
+    color: #ffa500;
+    font-family: 'Rubik Doodle Shadow', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-wrap: wrap;
+    font-size: 100px;
+    text-align: center;
+}
+
+link {
+    color: #ffa500;
+    text-decoration: none;
+}
+
+span {
+    text-decoration: underline;
+}
+
+.heroimg {
+    width: 50vw;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* z-index: -2; */
+}
+
+@media (max-width:1024px) {
+    .herotxt {
+        font-size: 80px;
+        height: max-content;
+        width: max-content;
+    }
+    .heroimg {
+        height: max-content;
+        width: max-content;
+    }
+}
+
+@media (max-width:767px) {
+    body {
+        overflow: auto;
+    }
+    .mainBody {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+        width: 100vw;
+    }
+    .herotxt {
+        /* margin-top: -50px; */
+        font-size: 50px;
+        z-index: -2;
+        height:max-content;
+    }
+    .heroimg {
+        height: max-content;
+    }
+    .heroimg img {  
+        /* margin-top: -500px; */
+        width: 280px;
+    }
+}
+
+.menuBody {
+    height: max-content;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 48px;
+}
+
+.productCard1,.productCard2,.productCard3,.productCard4,.productCard5,.productCard6 {
+    width: 400px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.productCard4,.productCard5 {
+    width: 600px;
+    align-items: center;
+    justify-content: center;
+}
+.productCard6 {
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+.price {
+    width: 300px;
+    height: 400px;
+    font-family: 'Rubik Doodle Shadow', cursive;
+    color: #ffa500;
+    text-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    text-align: center;
+    margin-top: -100px;
+}
+.hamburger {
+    display: none;
+}
+
+@media (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .hamburger {
+        display: block;
+    }
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo {
+        margin-top: 0;
+    }
+    .menuBody {
+        width: 100vw;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    .productCard1,.productCard2,.productCard3,.productCard4,.productCard5,.productCard6 {
+        width: 80vw;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    .productCard1 img {
+        width: 350px;
+    }
+    .price {
+        font-size: 40px;
+        margin-left: 0px;
+    }
+    .productCard2 img {
+        width: 350px;
+    }
+    .productCard3 img {
+        width: 350px;
+    }
+    .productCard4 img {
+        width: 350px;
+    }
+    .productCard5 img {
+        width: 350px;
+    }
+    .productCard6 img {
+        width: 350px;
+    }
 }
